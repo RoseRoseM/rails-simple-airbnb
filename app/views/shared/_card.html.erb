@@ -1,0 +1,27 @@
+<div class="flat-card p-3 mb-2">
+
+  <div class="flat-card-image" style="background-image: url('<%= Faker::LoremFlickr.image(size: "300x30#{flat.id}", search_terms: ["apartment"]) %>')"></div>
+  <div class="flat-card-content">
+    <div class="flat-card-title">
+      <h3><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+    </div>
+
+    <div class="flex">
+      <div class="flex">
+        <i class="fas fa-users"></i>
+        <span><%= flat.number_of_guests %></span>
+      </div>
+      <div class="flex ml-3">
+        <i class="fas fa-euro-sign"></i>
+        <%= flat.price_per_night %>
+      </div>
+    </div>
+
+    <div class="flat-card-actions">
+      <a href="/flats/<%= flat.id %>">More info</a>
+      <a class="ml-3 text-warning" href="/flats/<%= flat.id %>/edit">Edit</a>
+      <a data-confirm="Are you sure?" class="ml-3 text-danger" rel="nofollow" data-method="delete" href="/flats/<%= flat.id %>">Remove</a>
+    </div>
+  </div>
+</div>

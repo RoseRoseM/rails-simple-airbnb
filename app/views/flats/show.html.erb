@@ -1,0 +1,19 @@
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')"></div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-12">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to flats_path do %>
+  <p><i class="fas fa-undo-alt"></i></i> Back to list</p>
+<% end %>
+
